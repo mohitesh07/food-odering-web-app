@@ -1,0 +1,25 @@
+{
+  "name": "inventory-management-system",
+  "version": "1.0.0",
+  "description": "This is inventory-management-system",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitesh07/inventory-management-system.git"
+  },
+  "author": "Mohitesh Ch Agarwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohitesh07/inventory-management-system/issues"
+  },
+  "homepage": "https://github.com/mohitesh07/inventory-management-system#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
