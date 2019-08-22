@@ -20,6 +20,8 @@
   "homepage": "https://github.com/mohitesh07/inventory-management-system#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "popper.js": "^1.12.9"
   },
