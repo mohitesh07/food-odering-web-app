@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="./bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Online Food Odering System</title>
+  </head>
+  <body class="d-flex flex-column">
+    <!-- nav bar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">ONLINE FOOD ODERING SYSTEM</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#"
+            >Menu <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="#!/orders">Orders</a>
+          <a class="nav-item nav-link" href="#!/orders/placeOrder"
+            >Place Order</a
+          >
+        </div>
+      </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="./img/logo.jpg" alt="Food Ordering System"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link btn"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="./img/drop-down.png" alt="Click Me!" />
+              </a>
+              <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+              <div
+                class="dropdown-menu dropdown-menu-right animate slideIn"
+                aria-labelledby="navbarDropdown"
+              >
+                <a class="dropdown-item" href="#">Menu</a>
+                <a class="dropdown-item" href="#!/orders">Orders</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#!/orders/placeOrder"
+                  >Place Order</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="page-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div ng-view></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Made with <i class="fa fa-heart"></i> Mohitesh Ch Agarwal</small>
+      </div>
+    </footer>
+
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./app.js"></script>
+    <script src="./controller/menu.js"></script>
+    <script src="./controller/orders.js"></script>
+    <script src="./controller/user.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<div class="row mt-3 justify-content-center">
+  <div class="form-signin col-md-2" ng-if="!user">
+    <button
+      class="btn btn-lg btn-dark btn-block text-uppercase"
+      onclick="window.location.href = '#!/login'"
+    >
+      Log In
+    </button>
+  </div>
+
+  <div class="form-signin col-md-2" ng-if="user">
+    <button ng-if="user" class="btn btn-lg btn-dark btn-block text-uppercase">
+      <a href="/#!" ng-click="logout()" style="text-decoration: none;"
+        >Logout</a
+      >
+    </button>
+  </div>
+</div>
+
+<div ng-init="getMenuItems()" class="pt-3">
+  <div
+    class="alert alert-warning alert-dismissible fade show px-3"
+    role="alert"
+  >
+    <strong>Hi {{user}}!</strong> Have a nice ordering time. Made with
+    <i class="fa fa-heart"></i> by Mohitesh
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div style="text-align: center;" role="alert">
+    <h1 style="font-weight: bold; color:white; text-shadow: 3px 3px #000;">
+      Place Order from Menu
+    </h1>
+    <h6 style="color:white; text-shadow: 1px 1px #000;">
+      Total number of menu items: {{countItems}}
+    </h6>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div ng-repeat="item in menu">
+        <div class="col-md-3 py-3">
+          <div class="card shadow" style="width: 21rem;">
+            <img
+              src="http://localhost:8080/{{item.itemImage}}"
+              class="card-img-top"
+              alt="No Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">
+                Price: {{item.price}}
+              </p>
+              <a
+                href="#!/menu/details/{{item._id}}"
+                class="btn btn-success my-2"
+                style="border-radius: 2em;"
+                >View Details</a
+              >
+              <form ng-submit="placeOrder(item._id,quantity)">
+                <div class="form-group row justify-content-center">
+                  <input
+                    class="form-control col-md-7"
+                    attribute
+                    type="number"
+                    ng-model="quantity"
+                    placeholder="Enter Quantity"
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-warning col-md-4 mx-2"
+                    style="border-radius: 2em;"
+                  >
+                    Place Order
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

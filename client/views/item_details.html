@@ -1,0 +1,31 @@
+<div class="form-signin">
+  <button
+    class="btn btn-lg btn-dark btn-block text-uppercase col-md-2 mt-3"
+    onclick="window.location.href = '#!'"
+  >
+    Go Back
+  </button>
+</div>
+
+<div ng-init="getMenuItem()" class="pt-3">
+  <div
+    style="text-align: center; background-color: white; border-radius: 2em; width:400px; margin:auto auto;"
+    class="py-5 my-3"
+  >
+    <img
+      src="http://localhost:8080/{{menuItem.itemImage}}"
+      style="height:300px; width: 300px; border-radius:2em;"
+      alt="No Image"
+      class="shadow-lg"
+    />
+    <h1
+      style="font-weight: bold; color:black; text-shadow: 3px 3px  #d3d3d3;"
+      class="pt-3"
+    >
+      {{menuItem.name}}
+    </h1>
+    <h2 style="color:black; text-shadow: 3px 3px  #d3d3d3;">
+      Price: ₹{{menuItem.price}}
+    </h2>
+  </div>
+</div>

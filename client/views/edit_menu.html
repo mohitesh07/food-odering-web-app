@@ -1,0 +1,51 @@
+<div class="form-signin">
+  <button
+    class="btn btn-lg btn-dark btn-block text-uppercase col-md-2 mt-3"
+    onclick="window.location.href = '#!'"
+  >
+    Go Back
+  </button>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Update Menu Item</h5>
+          <form class="form-signin" ng-submit="updateMenuItem()">
+            <div class="form-label-group">
+              <input
+                type="text"
+                id="itemName"
+                class="form-control"
+                placeholder="Item Name"
+                ng-model="name"
+                autofocus
+              />
+              <label for="itemName">Item Name</label>
+            </div>
+
+            <div class="form-label-group">
+              <input
+                type="text"
+                id="price"
+                ng-model="price"
+                class="form-control"
+                placeholder="Item Price"
+              />
+              <label for="price">Item Price</label>
+            </div>
+
+            <button
+              class="btn btn-lg btn-facebook btn-block text-uppercase"
+              type="submit"
+            >
+              Update Menu Item
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

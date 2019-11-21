@@ -1,0 +1,21 @@
+<div class="form-signin">
+  <button
+    class="btn btn-lg btn-dark btn-block text-uppercase col-md-2 mt-3"
+    onclick="window.location.href = '/#!/orders'"
+  >
+    Go Back
+  </button>
+</div>
+
+<div ng-init="getOrderDetails()" class="pt-3">
+  <div
+    class="py-5 shadow-lg"
+    style="text-align: center; background-color: white; border-radius:2em;"
+  >
+    <h2>Name: {{orderItem.item.name}}</h2>
+    <h2>Quantity: {{orderItem.quantity}}</h2>
+    <h2>Price: ₹{{orderItem.item.price}}</h2>
+    <h2>Address: {{orderItem.address}}</h2>
+    <h1>Total: ₹{{orderItem.item.price * orderItem.quantity}}</h1>
+  </div>
+</div>
