@@ -43,7 +43,6 @@ exports.createProduct = (req, res, next) => {
   menu
     .save()
     .then(result => {
-      console.log(result);
       res.status(201).json({
         message: "Created item successfully",
         createdItem: {

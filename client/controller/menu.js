@@ -7,7 +7,6 @@ myApp.controller("menu", [
   "$route",
   "$routeParams",
   function($scope, $http, $location, $route, $routeParams) {
-    console.log("Menu loaded...");
     $scope.user = window.localStorage.user;
     $scope.getMenuItems = function() {
       $http.get("/api/menu").then(

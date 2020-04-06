@@ -1,9 +1,9 @@
 <div class="form-signin">
   <button
     class="btn btn-lg btn-dark btn-block text-uppercase col-md-2 mt-3"
-    onclick="window.location.href = '#!'"
+    onclick="window.history.back()"
   >
-    Go Back
+    GO BACK
   </button>
 </div>
 
@@ -13,7 +13,7 @@
     class="py-5 my-3"
   >
     <img
-      src="http://localhost:8080/{{menuItem.itemImage}}"
+      ng-src="{{menuItem.itemImage}}"
       style="height:300px; width: 300px; border-radius:2em;"
       alt="No Image"
       class="shadow-lg"

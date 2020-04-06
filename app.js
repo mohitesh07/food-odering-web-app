@@ -10,6 +10,7 @@ const userRoutes = require("./api/routes/user");
 
 //Client static folder
 app.use(express.static(__dirname + "/client"));
+app.use(express.static(__dirname + "/uploads"));
 
 // Database Connection
 mongoose.connect(
