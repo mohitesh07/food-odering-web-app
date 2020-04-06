@@ -7,7 +7,6 @@ myApp.controller("orders", [
   "$route",
   "$routeParams",
   function($scope, $http, $location, $route, $routeParams) {
-    console.log("Orders loaded...");
     $scope.user = window.localStorage.user;
     $scope.getOrders = function() {
       $http
